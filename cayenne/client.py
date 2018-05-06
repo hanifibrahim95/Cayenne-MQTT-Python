@@ -217,6 +217,14 @@ class CayenneMQTTClient:
         value is the data value to send.
         """
         self.virtualWrite(channel, value, TYPE_TEMPERATURE, UNIT_CELSIUS)
+        
+    def humidityWrite(self, channel, value):
+        """Send a Humidity value to Cayenne.
+
+        channel is the Cayenne channel to use.
+        value is the data value to send.
+        """
+        self.virtualWrite(channel, value, TYPE_RELATIVE_HUMIDITY, UNIT_PERCENT)
 
     def fahrenheitWrite(self, channel, value):
         """Send a Fahrenheit value to Cayenne.
